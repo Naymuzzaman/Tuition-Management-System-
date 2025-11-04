@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tuition Management System</title>
+
+  <style>
+    /* ====== Global Styles ====== */
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background: #4a90e2;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav {
+      background: #2c3e50;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 15px;
+      border-radius: 4px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: #4a90e2;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 30px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #4a90e2;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background: #4a90e2;
+      color: white;
+    }
+
+    /* ====== Form Styling ====== */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    label {
+      font-weight: 600;
+    }
+
+    input, select {
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: #4a90e2;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #357abd;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #2c3e50;
+      color: white;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🎓 Tuition Management System</h1>
+  </header>
+
+  <nav>
+    <a href="#students">Students</a>
+    <a href="#courses">Courses</a>
+    <a href="#payments">Payments</a>
+  </nav>
+
+  <div class="container" id="students">
+    <h2>Student List</h2>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Class</th>
+        <th>Contact</th>
+      </tr>
+      <tr>
+        <td>101</td>
+        <td>Rizve Ahmed</td>
+        <td>10</td>
+        <td>017xxxxxxxx</td>
+      </tr>
+      <tr>
+        <td>102</td>
+        <td>Karim Hasan</td>
+        <td>9</td>
+        <td>018xxxxxxxx</td>
+      </tr>
+      <tr>
+        <td>103</td>
+        <td>Sonia Akter</td>
+        <td>8</td>
+        <td>019xxxxxxxx</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="container" id="courses">
+    <h2>Available Courses</h2>
+    <table>
+      <tr>
+        <th>Course ID</th>
+        <th>Course Name</th>
+        <th>Fee (৳)</th>
+        <th>Duration</th>
+      </tr>
+      <tr>
+        <td>C101</td>
+        <td>Mathematics</td>
+        <td>3000</td>
+        <td>3 months</td>
+      </tr>
+      <tr>
+        <td>C102</td>
+        <td>English Grammar</td>
+        <td>2500</td>
+        <td>2 months</td>
+      </tr>
+      <tr>
+        <td>C103</td>
+        <td>Physics</td>
+        <td>3500</td>
+        <td>3 months</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="container" id="payments">
+    <h2>Payment Form</h2>
+    <form>
+      <label for="student">Student Name</label>
+      <input type="text" id="student" placeholder="Enter student name" required />
+
+      <label for="course">Select Course</label>
+      <select id="course">
+        <option>Mathematics</option>
+        <option>English Grammar</option>
+        <option>Physics</option>
+      </select>
+
+      <label for="amount">Amount (৳)</label>
+      <input type="number" id="amount" placeholder="Enter amount" required />
+
+      <label for="date">Payment Date</label>
+      <input type="date" id="date" required />
+
+      <button type="submit">Submit Payment</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Tuition Management System | Designed by You 💻</p>
+  </footer>
+
+</body>
+</html>
